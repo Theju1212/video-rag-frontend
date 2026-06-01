@@ -1,0 +1,142 @@
+.video-container {
+  min-height: 100vh;
+  background: #081126;
+  color: white;
+  padding: 40px;
+}
+
+.video-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.input-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.video-input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #2e3f67;
+  background: #111c3d;
+  color: white;
+  font-size: 16px;
+}
+
+.video-input::placeholder {
+  color: #9ca3af;
+}
+
+.analyze-btn {
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #6366f1
+  );
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  flex: 1;
+  background: #111c3d;
+  border: 1px solid #2e3f67;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card h3 {
+  color: #60a5fa;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+
+.chat-panel{
+  margin-top:30px;
+  padding:20px;
+  background:#111c3d;
+  border:1px solid #2e3f67;
+  border-radius:15px;
+}
+
+.messages{
+  max-height:400px;
+  overflow-y:auto;
+  margin-bottom:20px;
+}
+
+.message{
+  padding:15px;
+  border:1px solid #2e3f67;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+.message p{
+  margin-top:10px;
+}
+
+.chat-panel {
+  margin-top: 30px;
+}
+
+.messages {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #23366b;
+  border-radius: 12px;
+  padding: 15px;
+  background: #0d1c4f;
+}
+
+.user-message {
+  margin-left: auto;
+  margin-bottom: 15px;
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 12px;
+  background: #4f7cff;
+  color: white;
+}
+
+.bot-message {
+  margin-right: auto;
+  margin-bottom: 15px;
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 12px;
+  background: #16275c;
+  color: white;
+}
+
+.sources-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+}
