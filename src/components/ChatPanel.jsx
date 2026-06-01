@@ -128,41 +128,44 @@ while (true) {
 
   for (const char of data.text) {
 
-    assistantText += char;
+  assistantText += char;
 
-    setMessages(
-      prev => {
+  const currentText =
+    assistantText;
 
-        const updated =
-          [...prev];
+  setMessages(
+    prev => {
 
-        updated[
+      const updated =
+        [...prev];
+
+      updated[
+        updated.length - 1
+      ] = {
+
+        ...updated[
           updated.length - 1
-        ] = {
+        ],
 
-          ...updated[
-            updated.length - 1
-          ],
+        text:
+          currentText
 
-          text:
-            assistantText
+      };
 
-        };
+      return updated;
 
-        return updated;
+    }
+  );
 
-      }
-    );
+  await new Promise(
+    resolve =>
+      setTimeout(
+        resolve,
+        10
+      )
+  );
 
-    await new Promise(
-      resolve =>
-        setTimeout(
-          resolve,
-          10
-        )
-    );
-
-  }
+}
 
 }
 
