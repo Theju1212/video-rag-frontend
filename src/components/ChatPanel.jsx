@@ -1,9 +1,10 @@
+/* eslint-disable no-loop-func */
+
 import {
   useState,
   useRef,
   useEffect
 } from "react";
-
 
 import Message from "./Message";
 import "./ChatPanel.css";
