@@ -39,7 +39,7 @@ function VideoInput() {
 
       const youtubeResponse =
         await axios.get(
-          `${process.env.REACT_APP_API_URL}/youtube?url=${encodeURIComponent(
+          `${process.env.REACT_APP_API_URL}/analyze?url=${encodeURIComponent(
             youtubeUrl
           )}`
         );
