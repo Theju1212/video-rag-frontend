@@ -103,39 +103,81 @@ while (true) {
   const chunk =
     decoder.decode(value);
 
-  const lines =
-    chunk
-      .split("\n")
-      .filter(
-        line =>
-          line.startsWith(
-            "data:"
-          )
-      );
+ const lines =
+  chunk
+    .split("\n")
+    .filter(
+      line =>
+        line.startsWith(
+          "data:"
+        )
+    );
 
-  assistantText += data.text;
+for (const line of lines) {
 
-setMessages(prev => {
+  const data =
+    JSON.parse(
+      line.replace(
+        "data:",
+        ""
+      )
+    );
 
-  const updated =
-    [...prev];
+  if (data.text) {
 
-  updated[
-    updated.length - 1
-  ] = {
+    assistantText += data.text;
 
-    ...updated[
-      updated.length - 1
-    ],
+    setMessages(prev => {
 
-    text:
-      assistantText
+      const updated =
+        [...prev];
 
-  };
+      updated[
+        updated.length - 1
+      ] = {
 
-  return updated;
+        ...updated[
+          updated.length - 1
+        ],
 
-});
+        text:
+          assistantText
+
+      };
+
+      return updated;
+
+    });
+
+  }
+
+  if (data.done) {
+
+    setMessages(prev => {
+
+      const updated =
+        [...prev];
+
+      updated[
+        updated.length - 1
+      ] = {
+
+        ...updated[
+          updated.length - 1
+        ],
+
+        sources:
+          data.sources
+
+      };
+
+      return updated;
+
+    });
+
+  }
+
+}
 }
 
   
