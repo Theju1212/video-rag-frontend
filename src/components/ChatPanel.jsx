@@ -113,93 +113,29 @@ while (true) {
           )
       );
 
-  for (const line of lines) {
+  assistantText += data.text;
 
-    const data =
-      JSON.parse(
-        line.replace(
-          "data:",
-          ""
-        )
-      );
+setMessages(prev => {
 
-   
+  const updated =
+    [...prev];
 
-    if (data.text) {
+  updated[
+    updated.length - 1
+  ] = {
 
-  for (const char of data.text) {
+    ...updated[
+      updated.length - 1
+    ],
 
-  assistantText += char;
+    text:
+      assistantText
 
-  const currentText =
-    assistantText;
+  };
 
-  setMessages(
-    prev => {
+  return updated;
 
-      const updated =
-        [...prev];
-
-      updated[
-        updated.length - 1
-      ] = {
-
-        ...updated[
-          updated.length - 1
-        ],
-
-        text:
-          currentText
-
-      };
-
-      return updated;
-
-    }
-  );
-
-  await new Promise(
-    resolve =>
-      setTimeout(
-        resolve,
-        10
-      )
-  );
-
-}
-
-}
-
-    if (data.done) {
-
-      setMessages(
-        prev => {
-
-          const updated =
-            [...prev];
-
-          updated[
-            updated.length - 1
-          ] = {
-
-            ...updated[
-              updated.length - 1
-            ],
-
-            sources:
-              data.sources
-
-          };
-
-          return updated;
-
-        }
-      );
-
-    }
-
-  }
-
+});
 }
 
   
