@@ -76,23 +76,23 @@ function VideoCards({
 
           <p>
             <strong>Creator:</strong>{" "}
-            {instagramData.reelData.creator}
+            {instagramData.data?.creator}
           </p>
 
           <p>
             <strong>Views:</strong>{" "}
-            {instagramData.reelData.views}
+            {instagramData.data?.views}
           </p>
 
           <p>
             <strong>Likes:</strong>{" "}
-            {instagramData.reelData.likes}
+            {instagramData.data?.likes}
           </p>
 
           <p>
             <strong>Hashtags:</strong>{" "}
             {
-              instagramData.reelData
+              instagramData.data
                 .hashtags?.join(", ")
             }
           </p>
@@ -102,7 +102,7 @@ function VideoCards({
               Engagement Rate:
             </strong>{" "}
             {
-              instagramData.reelData
+              instagramData.data
                 .engagementRate
             }%
           </p>
