@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Video Comparison RAG Chatbot - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This frontend provides the user interface for comparing a YouTube video and an Instagram Reel using Retrieval-Augmented Generation (RAG).
 
-In the project directory, you can run:
+Users can analyze videos, compare performance metrics, and chat with an AI assistant powered by LangChain and Gemini.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* YouTube URL Input
+* Instagram Reel URL Input
+* Dynamic Metadata Cards
+* Engagement Rate Display
+* Video Comparison Interface
+* RAG Chat Interface
+* Conversational Memory
+* Source-Grounded Responses
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+* React
+* Axios
+* CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Workflow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+User enters:
 
-### `npm run eject`
+* YouTube URL
+* Instagram Reel URL
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+↓
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Analyze Videos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+↓
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Display Metadata
 
-## Learn More
+↓
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Compare Videos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+↓
 
-### Code Splitting
+Chat with RAG Assistant
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Video Analysis
 
-### Making a Progressive Web App
+Displays:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Creator
+* Views
+* Likes
+* Duration
+* Upload Date
+* Hashtags
+* Engagement Rate
 
-### Advanced Configuration
+### Comparison
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Generates comparison insights between Video A and Video B.
 
-### Deployment
+### Chat
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Allows users to ask:
 
-### `npm run build` fails to minify
+* What is the engagement rate of each video?
+* Why did Video A perform better?
+* Suggest improvements for Video B.
+* Compare the hooks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Installation
+
+Install dependencies
+
+npm install
+
+Start development server
+
+npm start
+
+---
+
+## Environment Variables
+
+Create a .env file:
+
+REACT_APP_API_URL=your_backend_url
+
+---
+
+## Backend Repository
+
+Backend:
+
+https://github.com/Theju1212/video-rag-backend
+
+---
+
+## Author
+
+Thejaswini Velvaluri
